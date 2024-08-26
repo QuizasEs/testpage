@@ -1,3 +1,4 @@
+/*estilos universales*/
 *{
     box-sizing:border-box;
 }
@@ -11,7 +12,7 @@ h3{ font-size: 2em;}
 p{ font-size: 1.25em;}
 ul{ list-style: none;}
 
-
+/*estilos generales de body*/
 body{
     margin: 0;
     font-family: 'roboto', sans-serif;
@@ -37,6 +38,8 @@ button:hover{
 .color-acento{
     color: #297799;
 }
+
+/*estilos navbar*/
 header{
     background-color: rgb(245,245,245);
     
@@ -69,6 +72,7 @@ header a{
 header a:hover{
     color: #2E86AB;
 }
+/*estilos de inicio o hero*/
 #hero{
     display: flex;
     align-items: center;
@@ -91,6 +95,7 @@ header a:hover{
     text-align: center;
     padding: 200px 12px;
 }
+/*servicios estilos del griidlayound*/
 #servicios{
     background-color: rgb(30, 30, 30);
     text-align: center;
@@ -102,6 +107,31 @@ header a:hover{
     padding: 100px 12px;
     
 }
+
+#servicios {
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    color: white;
+}
+
+#servicios .container {
+    text-align: center;
+    padding: 100px 12px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.grid-container > div {
+    width: 100%; /* Los elementos hijos ocupan el 100% del ancho disponible */
+}
+
+/* Media query para pantallas de al menos 720px */
+
+
 #servicios h2{
     margin-top: 0;
     font-size: 3em;
@@ -221,97 +251,99 @@ header a:hover{
   }
   
   /* Estilos responsivos */
-
-  @media (min-width: 720px){
-
-    header{
-      position:fixed;
-      width: 100%;
+  @media screen and (max-width: 749px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 columna para pantallas más pequeñas */
     }
-    header .container{
-      flex-direction: row;
-      justify-content: space-between;
+}
+@media (min-width: 750px) {
+    header {
+        position: fixed;
+        width: 100%;
     }
-    header nav{
-      flex-direction: row;
-      padding-bottom: 0;
-      padding-right: 20px;
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
     }
-
-    #hero h1{
-      font-size: 5em;
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
     }
-
-    #nosotros .container{
-      display: flex;
-      justify-content: space-evenly;
+    #hero h1 {
+        font-size: 5em;
     }
-    #nosotros .text{
-      width:50%;
-      text-align: center;
-      padding: 0px 30px;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    #nosotros .container {
+        display: flex;
+        justify-content: space-evenly;
     }
-    #nosotros h2{
-      padding: 0px;
+    #nosotros .text {
+        width: 50%;
+        text-align: center;
+        padding: 0px 30px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-    #nosotros .img-container{
-      background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-      ), url(media/OIP.jfif);
-      background-size: cover;
-      background-position: center center;
-      height: 400px;
-      width: 600px;
+    #nosotros h2 {
+        padding: 0px;
     }
-    #servicios .programas{
-      display: flex;
-      justify-content: center;
+    #nosotros .img-container {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ), url(media/OIP.jfif);
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 600px;
     }
-    #servicios p{
-      display: block;
-      margin-bottom: 30px;
+    #servicios .programas {
+        display: flex;
+        justify-content: center;
     }
-    #servicios h3{
-      margin-top: 0px;
+    #servicios p {
+        display: block;
+        margin-bottom: 30px;
     }
-    #servicios .carta{
-      padding: 10px;
+    #servicios h3 {
+        margin-top: 0px;
     }
 
-  }
-  @media (max-width: 768px) {
-
-
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas más anchas */
+    } 
+    #servicios .carta {
+        padding: 10px;
+    }
     .form-contact {
-      gap: 15px;
+        gap: 15px;
     }
-  
     .contact-camp {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
     button {
-      width: 100%;
-      padding: 15px;
+        width: 100%;
+        padding: 15px;
     }
-  }
-  footer {
+}
+
+
+footer {
     background-color: rgb(230,230,230);
-  }
-  footer p{
+}
+footer p {
     margin: 0; 
-    padding:12;
-    color: rgb(100,100,100)
-    }  
-  footer .container{
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+footer .container {
     height: 150px;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
-    }
+}
+
+
